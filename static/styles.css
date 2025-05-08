@@ -9,15 +9,18 @@ body {
   }
   
   .container {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    margin: 50px auto;
-    max-width: 900px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(60, 42, 90, 0.25);
+    border-radius: 18px;
+    padding: 50px;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+    animation: fadeInUp 1s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
+
   
   .container:hover {
     transform: translateY(-5px);
