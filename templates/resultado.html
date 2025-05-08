@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riesgo Cardiovascular</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #093bdf;
+            padding: 14px 20px;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            background-color: #093bdf;
+        }
+        .container {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .info-section {
+            margin-bottom: 40px;
+        }
+        .info-section h2 {
+            color: #093bdf;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <div class="navbar">
+        <a href="/">Inicio</a>
+        <a href="/informacion.html">Información del Proyecto</a>
+        <a href="/ingresar.html">Ingresar Datos</a>
+        <a href="/resultado.html">Ver Resultados</a>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <h1>Resultado de la Predicción del Riesgo Cardiovascular</h1>
+
+        <div class="resultados">
+            <h2>Tu nivel de riesgo es: <strong>{{ nivel_riesgo }}</strong></h2>
+
+            <h3>Recomendaciones Personalizadas:</h3>
+            <ul>
+                <li><strong>Ejercicio:</strong> Aumentar el nivel de actividad física.</li>
+                <li><strong>Alimentación:</strong> Incorporar más frutas y reducir el consumo de fritos.</li>
+                <li><strong>Reducción de Estrés:</strong> Implementar técnicas de relajación o meditación.</li>
+                <li><strong>Consumo de Tabaco/Alcohol:</strong> Reducir el consumo de estas sustancias.</li>
+            </ul>
+
+            <p>Te recomendamos hacer un seguimiento regular con tu médico y mantener hábitos saludables para prevenir futuros problemas cardiovasculares.</p>
+        </div>
+    </div>
+</body>
+</html>

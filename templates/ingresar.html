@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Datos - Riesgo Cardiovascular</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1b2e, #2a1d40);
+            color: #ece7f3;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 0.5s ease-in-out;
+        }
+    
+        .navbar {
+            background: linear-gradient(to right, #3b2d61, #5c4d8c);
+            padding: 15px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    
+        .navbar-brand, .nav-link {
+            color: #f3e9ff !important;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 4px rgba(255, 255, 255, 0.05);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+    
+        .nav-link:hover {
+            color: #c7b1f3 !important;
+            text-shadow: 0 0 10px #9f86c0;
+        }
+    
+        .container {
+            background: rgba(60, 42, 90, 0.25);
+            border-radius: 18px;
+            padding: 50px;
+            margin: 60px auto;
+            max-width: 900px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+            animation: fadeInUp 1s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    
+        .container:hover {
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+        }
+    
+        .navbar-toggler {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: transparent;
+        }
+    
+        .navbar-toggler-icon {
+            filter: brightness(170%);
+        }
+    
+        .navbar-brand-centered {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        a {
+            color: #d3bfff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        a:hover {
+            color: #a88bff;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <h1>Ingresar Datos para la Predicción del Riesgo Cardiovascular</h1>
+
+        <form action="/resultado" method="POST">
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+            </div>
+
+            <div class="form-group">
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="actividad">Nivel de actividad física (1-5):</label>
+                <input type="number" id="actividad" name="actividad" min="1" max="5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imc">IMC (Índice de Masa Corporal):</label>
+                <input type="number" id="imc" name="imc" step="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="presion">Presión arterial (mmHg):</label>
+                <input type="number" id="presion" name="presion" required>
+            </div>
+
+            <div class="form-group">
+                <label for="consumo">Consumo de tabaco/alcohol (0: Ninguno, 1: Bajo, 2: Moderado, 3: Alto):</label>
+                <input type="number" id="consumo" name="consumo" min="0" max="3" required>
+            </div>
+
+            <div class="form-group">
+                <label for="alimentacion">Alimentación (Frecuencia de frutas, fritos, bebidas azucaradas):</label>
+                <input type="text" id="alimentacion" name="alimentacion" required>
+            </div>
+
+            <div class="form-group">
+                <label for="estres">Nivel de estrés (1-5):</label>
+                <input type="number" id="estres" name="estres" min="1" max="5" required>
+            </div>
+
+            <button type="submit">Predecir Riesgo</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
