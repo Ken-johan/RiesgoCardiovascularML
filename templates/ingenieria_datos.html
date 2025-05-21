@@ -5,21 +5,28 @@
 {% block content %}
 <div class="container mt-5">
     <h1 class="mb-4">Ingeniería de los Datos</h1>
-    
-    <h3>Procesamiento de Variables</h3>
-    <p>
-        Para este proyecto, hemos adaptado el dataset original para trabajar con las siguientes variables específicas:
-    </p>
-    
+
+    <h3>Selección</h3>
     <ul>
-        <li>Variables demográficas: edad y género</li>
-        <li>Variables de estilo de vida: actividad física y hábitos alimenticios</li>
-        <li>Variables clínicas: IMC y presión arterial</li>
-        <li>Variables de riesgo: consumo de sustancias y nivel de estrés</li>
+        <li>Variables consideradas: Edad, Género, Actividad Física, Hábitos Alimenticios, IMC, Presión Arterial, Consumo de Sustancias y Nivel de Estrés.</li>
     </ul>
 
-    <p>
-        Estas variables fueron seleccionadas por su relevancia en la predicción del riesgo cardiovascular en población joven y su disponibilidad en el contexto colombiano.
-    </p>
+    <h3>Limpieza</h3>
+    <ul>
+        <li>Validación de la estructura del dataset, eliminación de registros duplicados y control de valores atípicos si se identifican.</li>
+        <li>Preparación de las variables categóricas mediante codificación adecuada para su uso en algoritmos de machine learning.</li>
+    </ul>
+
+    <h3>Transformación</h3>
+    <ul>
+        <li>Clasificación de variables como IMC y presión arterial según rangos clínicos reconocidos.</li>
+        <li>Generación de la variable objetivo “Riesgo” (bajo, medio, alto), utilizando reglas heurísticas basadas en combinaciones de factores de riesgo.</li>
+        <li>Normalización de variables continuas si se considera pertinente para el modelo.</li>
+    </ul>
+
+    <h3>Documentación</h3>
+    <ul>
+        <li>Registro detallado de cada transformación aplicada sobre los datos, para garantizar la trazabilidad, reproducibilidad y auditabilidad del modelo.</li>
+    </ul>
 </div>
 {% endblock %}

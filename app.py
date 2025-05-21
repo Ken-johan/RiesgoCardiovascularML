@@ -15,9 +15,9 @@ def index():
 def entendimiento_negocio():
     return render_template('entendimiento_negocio.html')
 
-@app.route('/entendimiento-datos')
-def entendimiento_datos():
-    return render_template('entendimiento_datos.html')
+@app.route('/ingenieria-modelo')
+def ingenieria_modelo():
+    return render_template('ingenieria_modelo.html')
 
 @app.route('/ingenieria-datos')
 def ingenieria_datos():
@@ -27,3 +27,6 @@ def ingenieria_datos():
 def ingresar():
     return render_template('ingresar.html')
 
+@app.route('/pcga')
+def pcga():
+    return render_template('pcga.html')

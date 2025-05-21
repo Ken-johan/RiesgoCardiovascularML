@@ -1,64 +1,37 @@
 {% extends 'base.html' %}
 
-{% block title %}Entendimiento del Negocio{% endblock %}
+{% block title %}Entendimiento del Negocio y los Datos{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
-    <h1 class="mb-4">Predicción Temprana de Riesgo Cardiovascular en Jóvenes Bogotanos</h1>
+    <h1 class="mb-4">Entendimiento del Negocio y los Datos</h1>
 
-    <h3>Planteamiento del problema y justificación</h3>
-    <p>
-        Las enfermedades cardiovasculares son una de las principales causas de morbilidad en Colombia, y su incidencia entre jóvenes ha aumentado debido a factores como el sedentarismo, el consumo de alimentos ultraprocesados, el estrés y el consumo de sustancias psicoactivas. 
-        Sin embargo, las estrategias de prevención suelen centrarse en adultos mayores, ignorando una población juvenil que ya presenta factores de riesgo desde temprana edad.
-    </p>
-    <p>
-        Este proyecto busca anticiparse a estos riesgos aplicando Machine Learning supervisado, con un enfoque preventivo y personalizado. 
-        A partir de variables clínicas y de estilo de vida, el sistema predice el nivel de riesgo cardiovascular y emite recomendaciones específicas. 
-        Esto promueve una cultura de autocuidado y decisiones informadas entre jóvenes de Bogotá, contribuyendo a la mejora del bienestar individual y colectivo, alineado con el ODS 3.
-    </p>
-
-    <h3>Objetivos del proyecto</h3>
-    <h5>Objetivo general</h5>
-    <p>
-        Desarrollar un modelo predictivo basado en Machine Learning que permita identificar el riesgo cardiovascular en jóvenes entre 15 y 29 años en Bogotá, generando además recomendaciones preventivas personalizadas.
-    </p>
-
-    <h5>Objetivos específicos</h5>
+    <h3>Objetivos de Negocio</h3>
     <ul>
-        <li>Identificar variables clínicas y de estilo de vida asociadas al riesgo cardiovascular juvenil.</li>
-        <li>Entrenar un modelo de clasificación como Random Forest o XGBoost para predecir niveles de riesgo.</li>
-        <li>Implementar una salida innovadora con recomendaciones personalizadas de acuerdo con los factores de riesgo detectados.</li>
-        <li>Promover el uso de herramientas tecnológicas como apoyo a la prevención en salud pública juvenil.</li>
+        <li>Las enfermedades cardiovasculares representan una de las principales causas de morbilidad en Colombia. Su incidencia ha aumentado significativamente entre jóvenes, debido al sedentarismo, el consumo de alimentos ultraprocesados, el estrés y el uso de sustancias psicoactivas.</li>
+        <li>Este proyecto busca anticiparse a estos riesgos mediante un modelo predictivo basado en machine learning, que clasifique el nivel de riesgo cardiovascular (bajo, medio o alto) en jóvenes de Bogotá entre 18 y 28 años.</li>
+        <li>Se pretende, además, identificar qué variables —como actividad física, hábitos alimenticios, IMC y presión arterial— son más determinantes en dicho riesgo, con el fin de generar recomendaciones preventivas personalizadas.</li>
+        <li>El enfoque del proyecto está alineado con el ODS 3: Salud y bienestar, promoviendo decisiones informadas y cultura de autocuidado en la juventud.</li>
     </ul>
 
-    <h3>ODS Asociado</h3>
+    <h3>Preguntas Clave</h3>
     <ul>
-        <li><strong>ODS 3 – Salud y bienestar</strong>: Garantizar una vida sana y promover el bienestar para todos en todas las edades.</li>
+        <li>¿Cuáles variables del dataset presentan mayor capacidad predictiva del riesgo cardiovascular en población joven?</li>
+        <li>¿Qué nivel de precisión puede alcanzar un árbol de decisión para clasificar correctamente el nivel de riesgo en esta población objetivo?</li>
+        <li>¿Cómo se pueden traducir los resultados del modelo en recomendaciones prácticas para la prevención?</li>
     </ul>
 
-    <h3>Marco referencial</h3>
-    <p>
-        Se parte del contexto epidemiológico colombiano, reportado por entidades como el Ministerio de Salud y la OMS, que indican un incremento en factores de riesgo cardiovascular en población joven. 
-        A esto se suma la baja cobertura de programas preventivos focalizados en edades tempranas.
-    </p>
-    <p>
-        En este marco, el uso de técnicas de Machine Learning no solo permite detectar casos de riesgo, sino también generar estrategias preventivas basadas en evidencia.
-        El modelo se desarrollará utilizando el dataset de enfermedades cardíacas del repositorio UCI adaptado a jóvenes, complementado con datos simulados representativos de Bogotá.
-        Se emplearán técnicas supervisadas y lógica condicional para la generación de recomendaciones personalizadas.
-    </p>
-
-    <h3>Recursos</h3>
+    <h3>Evaluación de Datos</h3>
     <ul>
-        <li><strong>Enlace del GitHub:</strong> <a href="https://github.com/Ken-johan/RiesgoCardiovascularML.git" target="_blank">https://github.com/Ken-johan/RiesgoCardiovascularML.git</a></li>
+        <li>El dataset consta de 300 registros simulados que representan casos de jóvenes entre 18 y 28 años, con variables demográficas, clínicas, de estilo de vida y de riesgo.</li>
+        <li>No presenta valores faltantes, por lo que se parte de una base completa y balanceada para el análisis.</li>
+        <li>Se realizará una revisión de la distribución y relevancia de las variables para validar su adecuación al problema de clasificación supervisada.</li>
     </ul>
 
-    <h3>Referencias</h3>
+    <h3>Análisis de Viabilidad</h3>
     <ul>
-        <li>ChatGPT. (2025). Asistencia en el desarrollo de proyectos de predicción de riesgo cardiovascular en jóvenes con ML. OpenAI. <a href="https://chat.openai.com" target="_blank">chat.openai.com</a></li>
-        <li>Ministerio de Salud y Protección Social. (2021). <em>Estadísticas en salud cardiovascular en Colombia</em>. <a href="https://www.minsalud.gov.co" target="_blank">minsalud.gov.co</a></li>
-        <li>OMS. (2023). <em>Enfermedades cardiovasculares</em>. <a href="https://www.who.int/es/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)" target="_blank">who.int</a></li>
-        <li>Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In KDD 2016. <a href="https://doi.org/10.1145/2939672.2939785" target="_blank">doi.org/10.1145/2939672.2939785</a></li>
-        <li>Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. JMLR, 12, 2825–2830.</li>
+        <li>A nivel técnico, el dataset es adecuado para construir un modelo de clasificación basado en árboles de decisión, dada la naturaleza categórica y cuantitativa de las variables.</li>
+        <li>Desde una perspectiva organizacional, el proyecto tiene fines académicos, pero su impacto potencial abarca aplicaciones educativas, institucionales o comunitarias orientadas a la prevención de enfermedades cardiovasculares en población juvenil.</li>
     </ul>
 </div>
 {% endblock %}

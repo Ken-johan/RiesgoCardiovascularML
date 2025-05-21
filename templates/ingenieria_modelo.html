@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Ingeniería del Modelo{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Ingeniería del Modelo</h1>
+
+    <h3>Selección de Algoritmos</h3>
+    <ul>
+        <li>Se empleará un árbol de decisión como modelo principal, debido a su capacidad explicativa y facilidad de interpretación para fines preventivos.</li>
+        <li>Se consideran otros modelos complementarios como Random Forest, Regresión Logística o KNN para futuras comparaciones de rendimiento.</li>
+    </ul>
+
+    <h3>Entrenamiento</h3>
+    <ul>
+        <li>El dataset será dividido en conjuntos de entrenamiento (70%) y prueba (30%) para validar su capacidad de generalización.</li>
+        <li>Las variables serán preprocesadas según sus características; se aplicará normalización si es necesario.</li>
+    </ul>
+
+    <h3>Ajuste de Hiperparámetros</h3>
+    <ul>
+        <li>Se utilizará la técnica de Grid Search para ajustar parámetros como la profundidad máxima del árbol, el criterio de división, entre otros.</li>
+        <li>La selección óptima de parámetros busca mejorar la precisión del modelo sin incurrir en sobreajuste.</li>
+    </ul>
+
+    <h3>Validación</h3>
+    <ul>
+        <li>Se aplicará validación cruzada (k-fold) para asegurar que el modelo sea robusto y su rendimiento no dependa de una sola partición de los datos.</li>
+        <li>Este proceso permitirá evaluar la estabilidad y la capacidad predictiva del árbol de decisión antes de su implementación.</li>
+    </ul>
+</div>
+{% endblock %}
