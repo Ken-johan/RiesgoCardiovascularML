@@ -1,0 +1,301 @@
+Edad,Género,Actividad_Física,Hábitos_Alimenticios,IMC,Presión_Arterial,Consumo_Sustancias,Nivel_Estrés
+18,Masculino,Sedentario,Saludables,24.3,Hipertensión,Sí,Bajo
+19,Masculino,Sedentario,No Saludables,23.7,Prehipertensión,No,Alto
+18,Femenino,Activo,No Saludables,25.0,Prehipertensión,No,Moderado
+21,Femenino,Activo,No Saludables,21.2,Normal,No,Alto
+26,Femenino,Sedentario,Saludables,20.8,Hipertensión,No,Bajo
+22,Femenino,Activo,Saludables,21.0,Normal,No,Moderado
+22,Masculino,Activo,Saludables,32.6,Normal,No,Moderado
+27,Masculino,Activo,Saludables,33.6,Hipertensión,Sí,Alto
+22,Femenino,Sedentario,No Saludables,32.6,Normal,No,Alto
+19,Femenino,Moderado,Saludables,20.0,Normal,No,Alto
+28,Masculino,Sedentario,No Saludables,20.0,Prehipertensión,No,Alto
+22,Masculino,Moderado,Saludables,18.8,Hipertensión,Sí,Alto
+23,Masculino,Sedentario,No Saludables,27.2,Normal,Sí,Alto
+23,Masculino,Activo,Saludables,28.7,Hipertensión,Sí,Bajo
+24,Femenino,Sedentario,Saludables,33.6,Prehipertensión,No,Bajo
+24,Masculino,Activo,No Saludables,26.5,Prehipertensión,Sí,Alto
+22,Masculino,Activo,No Saludables,34.1,Normal,Sí,Bajo
+22,Masculino,Activo,No Saludables,34.3,Prehipertensión,Sí,Bajo
+24,Masculino,Sedentario,Saludables,33.1,Prehipertensión,Sí,Bajo
+24,Femenino,Moderado,No Saludables,28.1,Prehipertensión,Sí,Alto
+26,Masculino,Moderado,No Saludables,33.7,Prehipertensión,Sí,Alto
+28,Femenino,Sedentario,No Saludables,30.9,Prehipertensión,Sí,Bajo
+25,Masculino,Sedentario,Saludables,32.7,Prehipertensión,No,Moderado
+21,Masculino,Activo,Saludables,25.4,Normal,Sí,Moderado
+20,Masculino,Sedentario,No Saludables,29.1,Normal,Sí,Bajo
+18,Femenino,Moderado,No Saludables,32.6,Prehipertensión,No,Alto
+23,Masculino,Moderado,No Saludables,25.2,Normal,Sí,Alto
+18,Masculino,Sedentario,Saludables,25.3,Prehipertensión,No,Bajo
+26,Masculino,Moderado,No Saludables,27.6,Prehipertensión,Sí,Moderado
+20,Femenino,Activo,No Saludables,27.2,Normal,No,Alto
+23,Masculino,Moderado,Saludables,28.0,Prehipertensión,No,Alto
+25,Masculino,Sedentario,Saludables,23.9,Hipertensión,No,Alto
+21,Masculino,Moderado,No Saludables,25.6,Prehipertensión,No,Moderado
+28,Masculino,Activo,No Saludables,23.4,Hipertensión,No,Bajo
+21,Femenino,Moderado,Saludables,34.9,Normal,Sí,Moderado
+28,Femenino,Moderado,Saludables,20.9,Normal,No,Moderado
+19,Masculino,Sedentario,No Saludables,26.2,Prehipertensión,No,Moderado
+20,Femenino,Sedentario,Saludables,24.4,Hipertensión,Sí,Bajo
+18,Femenino,Moderado,Saludables,22.1,Normal,Sí,Alto
+20,Femenino,Sedentario,No Saludables,30.9,Normal,Sí,Moderado
+21,Femenino,Sedentario,No Saludables,19.4,Hipertensión,Sí,Alto
+24,Masculino,Activo,No Saludables,34.2,Normal,Sí,Alto
+18,Masculino,Sedentario,No Saludables,24.5,Hipertensión,Sí,Alto
+25,Femenino,Activo,Saludables,26.9,Prehipertensión,Sí,Alto
+18,Femenino,Sedentario,Saludables,33.1,Hipertensión,No,Bajo
+25,Femenino,Activo,Saludables,21.7,Prehipertensión,No,Alto
+18,Masculino,Sedentario,Saludables,29.9,Normal,No,Moderado
+26,Femenino,Activo,No Saludables,28.8,Prehipertensión,Sí,Alto
+20,Femenino,Moderado,No Saludables,31.6,Normal,Sí,Bajo
+23,Masculino,Sedentario,No Saludables,23.5,Normal,Sí,Alto
+27,Masculino,Sedentario,Saludables,32.4,Hipertensión,No,Bajo
+22,Masculino,Sedentario,Saludables,27.4,Prehipertensión,No,Moderado
+26,Femenino,Moderado,No Saludables,33.0,Hipertensión,Sí,Alto
+23,Masculino,Moderado,No Saludables,18.6,Hipertensión,Sí,Moderado
+21,Masculino,Activo,Saludables,33.3,Normal,No,Bajo
+22,Femenino,Activo,Saludables,19.2,Hipertensión,No,Alto
+28,Femenino,Moderado,Saludables,26.8,Prehipertensión,No,Bajo
+25,Masculino,Sedentario,Saludables,26.9,Hipertensión,Sí,Alto
+28,Femenino,Moderado,No Saludables,27.5,Hipertensión,Sí,Moderado
+26,Femenino,Sedentario,No Saludables,31.0,Normal,Sí,Bajo
+24,Femenino,Activo,Saludables,20.7,Prehipertensión,No,Bajo
+18,Masculino,Activo,Saludables,21.9,Prehipertensión,No,Moderado
+24,Femenino,Sedentario,No Saludables,27.4,Normal,Sí,Moderado
+18,Femenino,Sedentario,Saludables,19.9,Prehipertensión,Sí,Alto
+22,Femenino,Moderado,Saludables,19.5,Prehipertensión,Sí,Bajo
+28,Masculino,Moderado,No Saludables,21.4,Hipertensión,No,Alto
+20,Masculino,Activo,Saludables,19.9,Prehipertensión,No,Alto
+27,Femenino,Activo,Saludables,31.0,Hipertensión,No,Alto
+25,Femenino,Sedentario,No Saludables,22.3,Normal,No,Bajo
+28,Masculino,Activo,No Saludables,24.3,Prehipertensión,Sí,Alto
+22,Femenino,Moderado,No Saludables,30.8,Normal,Sí,Alto
+25,Masculino,Moderado,Saludables,21.4,Prehipertensión,Sí,Moderado
+20,Masculino,Moderado,No Saludables,33.6,Hipertensión,Sí,Moderado
+26,Femenino,Sedentario,No Saludables,27.5,Prehipertensión,Sí,Bajo
+23,Masculino,Moderado,Saludables,25.9,Normal,Sí,Alto
+18,Masculino,Activo,No Saludables,21.6,Normal,No,Bajo
+23,Femenino,Activo,No Saludables,26.4,Hipertensión,No,Moderado
+25,Masculino,Sedentario,No Saludables,20.6,Normal,Sí,Moderado
+24,Femenino,Activo,Saludables,23.4,Prehipertensión,No,Moderado
+22,Masculino,Activo,No Saludables,29.6,Hipertensión,No,Moderado
+26,Femenino,Activo,No Saludables,20.1,Hipertensión,Sí,Moderado
+21,Femenino,Sedentario,No Saludables,25.2,Prehipertensión,No,Alto
+23,Masculino,Moderado,Saludables,28.9,Prehipertensión,Sí,Alto
+23,Masculino,Sedentario,No Saludables,20.7,Prehipertensión,No,Bajo
+27,Femenino,Sedentario,Saludables,26.2,Hipertensión,No,Alto
+27,Femenino,Sedentario,Saludables,34.8,Normal,No,Bajo
+19,Femenino,Moderado,No Saludables,21.7,Prehipertensión,Sí,Bajo
+24,Femenino,Sedentario,No Saludables,31.8,Prehipertensión,Sí,Bajo
+21,Femenino,Activo,No Saludables,28.1,Hipertensión,No,Moderado
+20,Femenino,Moderado,No Saludables,27.6,Hipertensión,No,Moderado
+23,Femenino,Sedentario,No Saludables,21.1,Normal,Sí,Moderado
+22,Masculino,Moderado,Saludables,27.7,Normal,Sí,Alto
+22,Masculino,Sedentario,No Saludables,23.8,Hipertensión,No,Moderado
+28,Femenino,Sedentario,Saludables,31.2,Normal,Sí,Bajo
+21,Masculino,Activo,Saludables,27.8,Normal,No,Bajo
+21,Femenino,Activo,No Saludables,32.0,Prehipertensión,No,Bajo
+23,Masculino,Activo,No Saludables,32.4,Hipertensión,No,Alto
+20,Masculino,Moderado,Saludables,19.5,Normal,No,Bajo
+28,Femenino,Activo,No Saludables,33.9,Hipertensión,Sí,Moderado
+22,Masculino,Sedentario,No Saludables,29.7,Prehipertensión,Sí,Moderado
+27,Masculino,Activo,No Saludables,28.9,Hipertensión,Sí,Moderado
+21,Femenino,Sedentario,Saludables,24.1,Hipertensión,No,Bajo
+26,Masculino,Sedentario,No Saludables,29.4,Normal,Sí,Moderado
+24,Masculino,Activo,No Saludables,26.0,Prehipertensión,No,Alto
+24,Femenino,Sedentario,No Saludables,22.3,Hipertensión,No,Alto
+23,Femenino,Moderado,No Saludables,26.8,Prehipertensión,No,Bajo
+25,Masculino,Moderado,Saludables,21.7,Prehipertensión,Sí,Alto
+28,Femenino,Activo,No Saludables,26.4,Hipertensión,No,Moderado
+19,Femenino,Sedentario,No Saludables,31.2,Hipertensión,No,Alto
+28,Masculino,Sedentario,No Saludables,33.7,Hipertensión,Sí,Bajo
+18,Femenino,Moderado,No Saludables,29.1,Normal,No,Alto
+21,Masculino,Sedentario,No Saludables,33.3,Prehipertensión,Sí,Bajo
+27,Masculino,Moderado,Saludables,24.8,Prehipertensión,Sí,Bajo
+19,Masculino,Sedentario,No Saludables,19.7,Prehipertensión,Sí,Moderado
+26,Masculino,Activo,Saludables,19.1,Prehipertensión,No,Alto
+28,Masculino,Moderado,Saludables,18.9,Normal,Sí,Alto
+18,Femenino,Moderado,No Saludables,20.9,Hipertensión,Sí,Bajo
+23,Femenino,Moderado,Saludables,30.8,Prehipertensión,Sí,Alto
+24,Femenino,Moderado,No Saludables,23.2,Prehipertensión,No,Alto
+28,Masculino,Activo,Saludables,19.8,Normal,No,Alto
+23,Femenino,Moderado,Saludables,23.6,Normal,Sí,Bajo
+26,Masculino,Moderado,Saludables,19.3,Prehipertensión,Sí,Bajo
+21,Masculino,Sedentario,Saludables,18.8,Prehipertensión,Sí,Moderado
+18,Femenino,Sedentario,Saludables,22.1,Hipertensión,Sí,Moderado
+18,Femenino,Moderado,No Saludables,33.4,Normal,Sí,Alto
+18,Masculino,Moderado,Saludables,34.4,Hipertensión,Sí,Bajo
+21,Femenino,Moderado,No Saludables,24.9,Normal,Sí,Bajo
+28,Femenino,Moderado,Saludables,25.3,Hipertensión,No,Alto
+22,Femenino,Activo,No Saludables,20.8,Normal,No,Alto
+23,Femenino,Moderado,No Saludables,34.9,Prehipertensión,No,Alto
+25,Femenino,Activo,Saludables,23.0,Normal,No,Bajo
+28,Masculino,Sedentario,Saludables,21.6,Normal,No,Alto
+20,Masculino,Sedentario,No Saludables,25.4,Prehipertensión,No,Alto
+22,Masculino,Sedentario,No Saludables,26.1,Hipertensión,No,Bajo
+28,Masculino,Moderado,No Saludables,26.1,Prehipertensión,No,Bajo
+21,Femenino,Activo,No Saludables,32.0,Hipertensión,No,Alto
+22,Femenino,Moderado,No Saludables,25.9,Prehipertensión,No,Bajo
+25,Femenino,Moderado,No Saludables,31.8,Prehipertensión,Sí,Bajo
+20,Masculino,Moderado,Saludables,32.7,Prehipertensión,No,Moderado
+23,Masculino,Activo,No Saludables,28.7,Hipertensión,Sí,Bajo
+28,Femenino,Activo,Saludables,32.7,Normal,No,Bajo
+26,Masculino,Sedentario,No Saludables,28.6,Prehipertensión,Sí,Alto
+28,Masculino,Moderado,No Saludables,20.6,Hipertensión,No,Bajo
+25,Femenino,Activo,Saludables,21.7,Normal,No,Moderado
+21,Masculino,Moderado,No Saludables,30.7,Normal,Sí,Bajo
+28,Femenino,Activo,No Saludables,29.5,Hipertensión,No,Moderado
+21,Masculino,Activo,Saludables,23.7,Normal,No,Moderado
+19,Masculino,Moderado,Saludables,29.2,Normal,Sí,Moderado
+26,Femenino,Moderado,Saludables,18.5,Hipertensión,Sí,Moderado
+25,Femenino,Moderado,No Saludables,34.7,Hipertensión,No,Alto
+21,Masculino,Activo,No Saludables,29.9,Hipertensión,No,Moderado
+20,Femenino,Moderado,Saludables,31.4,Normal,Sí,Moderado
+23,Masculino,Activo,No Saludables,23.2,Hipertensión,No,Bajo
+25,Femenino,Activo,No Saludables,23.5,Hipertensión,Sí,Bajo
+19,Masculino,Sedentario,Saludables,24.7,Normal,Sí,Bajo
+19,Femenino,Moderado,No Saludables,20.5,Prehipertensión,No,Moderado
+26,Femenino,Moderado,No Saludables,20.9,Normal,Sí,Moderado
+27,Femenino,Sedentario,No Saludables,34.1,Normal,Sí,Alto
+19,Masculino,Moderado,Saludables,19.8,Prehipertensión,No,Bajo
+27,Masculino,Moderado,Saludables,27.4,Prehipertensión,Sí,Bajo
+24,Femenino,Sedentario,No Saludables,29.7,Hipertensión,No,Moderado
+24,Masculino,Sedentario,No Saludables,32.7,Normal,Sí,Moderado
+28,Masculino,Sedentario,No Saludables,20.1,Prehipertensión,Sí,Moderado
+21,Femenino,Activo,Saludables,32.2,Prehipertensión,No,Moderado
+24,Femenino,Sedentario,No Saludables,32.1,Hipertensión,Sí,Moderado
+20,Femenino,Moderado,No Saludables,31.5,Hipertensión,No,Bajo
+22,Femenino,Moderado,No Saludables,33.2,Hipertensión,No,Bajo
+20,Masculino,Sedentario,Saludables,32.0,Normal,No,Alto
+25,Masculino,Moderado,No Saludables,34.5,Normal,No,Moderado
+28,Femenino,Sedentario,Saludables,31.8,Hipertensión,No,Alto
+22,Femenino,Moderado,No Saludables,20.4,Normal,No,Alto
+19,Femenino,Sedentario,Saludables,31.8,Prehipertensión,No,Alto
+28,Masculino,Sedentario,No Saludables,33.9,Normal,No,Moderado
+18,Femenino,Activo,No Saludables,32.8,Hipertensión,Sí,Alto
+28,Masculino,Activo,Saludables,30.9,Normal,Sí,Alto
+26,Femenino,Moderado,No Saludables,23.0,Hipertensión,Sí,Bajo
+24,Femenino,Sedentario,Saludables,33.0,Normal,No,Alto
+24,Femenino,Activo,No Saludables,20.3,Normal,No,Alto
+27,Masculino,Activo,Saludables,28.1,Normal,No,Bajo
+28,Femenino,Activo,Saludables,27.6,Hipertensión,No,Moderado
+23,Femenino,Sedentario,Saludables,20.5,Hipertensión,Sí,Alto
+26,Masculino,Moderado,Saludables,26.6,Normal,Sí,Moderado
+27,Masculino,Moderado,Saludables,23.5,Normal,Sí,Alto
+23,Masculino,Sedentario,No Saludables,28.8,Hipertensión,No,Bajo
+22,Femenino,Sedentario,No Saludables,19.8,Hipertensión,No,Bajo
+22,Femenino,Sedentario,No Saludables,21.8,Hipertensión,No,Alto
+18,Femenino,Activo,Saludables,34.6,Hipertensión,No,Bajo
+26,Masculino,Sedentario,Saludables,22.4,Normal,Sí,Moderado
+21,Femenino,Sedentario,No Saludables,18.9,Hipertensión,Sí,Moderado
+18,Femenino,Sedentario,No Saludables,34.7,Hipertensión,No,Alto
+24,Femenino,Moderado,Saludables,21.6,Hipertensión,No,Bajo
+18,Masculino,Sedentario,No Saludables,19.6,Prehipertensión,Sí,Moderado
+25,Masculino,Sedentario,Saludables,33.9,Normal,Sí,Bajo
+26,Femenino,Moderado,Saludables,20.9,Prehipertensión,Sí,Moderado
+18,Femenino,Sedentario,No Saludables,25.7,Prehipertensión,Sí,Bajo
+28,Masculino,Sedentario,Saludables,25.9,Hipertensión,Sí,Moderado
+22,Masculino,Sedentario,Saludables,30.1,Prehipertensión,Sí,Moderado
+26,Masculino,Moderado,Saludables,32.5,Prehipertensión,Sí,Moderado
+24,Femenino,Sedentario,No Saludables,33.2,Prehipertensión,Sí,Alto
+26,Femenino,Activo,Saludables,33.4,Normal,No,Moderado
+18,Masculino,Activo,Saludables,20.1,Hipertensión,Sí,Bajo
+23,Masculino,Sedentario,Saludables,30.8,Prehipertensión,No,Bajo
+19,Masculino,Moderado,No Saludables,33.2,Normal,Sí,Bajo
+24,Masculino,Activo,No Saludables,21.2,Prehipertensión,Sí,Moderado
+18,Masculino,Moderado,Saludables,20.8,Normal,No,Bajo
+19,Masculino,Activo,Saludables,23.2,Normal,No,Alto
+18,Femenino,Activo,Saludables,21.2,Normal,Sí,Moderado
+19,Masculino,Moderado,Saludables,27.4,Hipertensión,Sí,Bajo
+28,Masculino,Activo,Saludables,24.9,Normal,Sí,Bajo
+28,Masculino,Moderado,No Saludables,18.5,Prehipertensión,Sí,Moderado
+26,Masculino,Activo,No Saludables,33.9,Normal,Sí,Alto
+27,Masculino,Moderado,Saludables,30.3,Prehipertensión,Sí,Alto
+28,Femenino,Moderado,Saludables,29.0,Prehipertensión,Sí,Alto
+24,Femenino,Moderado,Saludables,26.7,Normal,No,Alto
+27,Masculino,Moderado,Saludables,24.4,Prehipertensión,Sí,Alto
+20,Masculino,Activo,Saludables,33.1,Normal,No,Moderado
+18,Femenino,Sedentario,No Saludables,30.6,Hipertensión,Sí,Bajo
+27,Masculino,Sedentario,Saludables,33.8,Normal,Sí,Bajo
+21,Femenino,Activo,Saludables,25.6,Normal,No,Moderado
+23,Masculino,Moderado,Saludables,33.0,Normal,No,Bajo
+28,Masculino,Sedentario,Saludables,34.0,Normal,No,Bajo
+23,Femenino,Sedentario,Saludables,21.7,Hipertensión,No,Bajo
+23,Masculino,Sedentario,No Saludables,20.8,Prehipertensión,No,Alto
+28,Femenino,Sedentario,Saludables,29.3,Hipertensión,No,Alto
+23,Masculino,Sedentario,Saludables,22.9,Normal,Sí,Alto
+23,Masculino,Sedentario,Saludables,27.2,Prehipertensión,Sí,Moderado
+24,Masculino,Activo,No Saludables,28.7,Normal,No,Moderado
+25,Masculino,Moderado,Saludables,24.4,Normal,No,Alto
+27,Femenino,Moderado,No Saludables,21.5,Normal,Sí,Bajo
+21,Femenino,Sedentario,No Saludables,28.9,Hipertensión,No,Moderado
+25,Masculino,Moderado,No Saludables,34.5,Prehipertensión,Sí,Alto
+27,Masculino,Moderado,No Saludables,33.7,Hipertensión,Sí,Moderado
+28,Femenino,Activo,No Saludables,29.6,Normal,No,Alto
+25,Masculino,Moderado,No Saludables,19.6,Normal,No,Bajo
+23,Masculino,Sedentario,No Saludables,34.8,Prehipertensión,No,Moderado
+26,Femenino,Activo,Saludables,19.6,Prehipertensión,Sí,Moderado
+28,Masculino,Moderado,No Saludables,34.8,Prehipertensión,Sí,Alto
+28,Masculino,Moderado,Saludables,24.0,Prehipertensión,Sí,Alto
+28,Femenino,Sedentario,Saludables,30.0,Prehipertensión,Sí,Alto
+27,Femenino,Activo,Saludables,30.9,Prehipertensión,Sí,Bajo
+28,Femenino,Sedentario,No Saludables,31.5,Normal,Sí,Moderado
+25,Masculino,Sedentario,No Saludables,20.0,Prehipertensión,Sí,Alto
+21,Masculino,Sedentario,No Saludables,31.0,Hipertensión,No,Alto
+23,Femenino,Moderado,No Saludables,33.3,Hipertensión,Sí,Alto
+25,Femenino,Sedentario,No Saludables,28.2,Normal,Sí,Bajo
+28,Masculino,Moderado,No Saludables,23.0,Prehipertensión,Sí,Moderado
+18,Masculino,Activo,No Saludables,20.4,Prehipertensión,Sí,Alto
+28,Masculino,Sedentario,No Saludables,18.5,Hipertensión,No,Bajo
+21,Femenino,Activo,Saludables,32.1,Prehipertensión,Sí,Bajo
+18,Masculino,Sedentario,Saludables,30.2,Prehipertensión,Sí,Moderado
+23,Masculino,Activo,No Saludables,24.8,Prehipertensión,Sí,Bajo
+21,Masculino,Sedentario,Saludables,21.7,Prehipertensión,No,Alto
+22,Masculino,Activo,Saludables,23.0,Normal,Sí,Moderado
+24,Femenino,Activo,Saludables,23.2,Normal,No,Alto
+23,Masculino,Moderado,Saludables,24.3,Hipertensión,Sí,Bajo
+24,Femenino,Activo,Saludables,23.4,Normal,Sí,Bajo
+27,Femenino,Moderado,Saludables,24.3,Prehipertensión,No,Bajo
+28,Masculino,Activo,Saludables,19.7,Prehipertensión,No,Moderado
+18,Femenino,Moderado,No Saludables,19.1,Normal,Sí,Alto
+22,Masculino,Sedentario,Saludables,32.9,Prehipertensión,Sí,Moderado
+19,Masculino,Activo,No Saludables,26.2,Prehipertensión,Sí,Alto
+23,Femenino,Sedentario,No Saludables,30.7,Normal,No,Alto
+26,Femenino,Activo,Saludables,30.5,Normal,Sí,Moderado
+21,Masculino,Moderado,No Saludables,28.6,Hipertensión,No,Moderado
+26,Masculino,Sedentario,No Saludables,34.9,Normal,Sí,Moderado
+21,Masculino,Activo,Saludables,26.8,Hipertensión,Sí,Moderado
+26,Femenino,Activo,No Saludables,29.9,Normal,Sí,Moderado
+26,Masculino,Activo,No Saludables,28.7,Normal,No,Bajo
+22,Masculino,Moderado,No Saludables,32.3,Hipertensión,Sí,Alto
+24,Masculino,Moderado,Saludables,33.6,Prehipertensión,Sí,Moderado
+20,Femenino,Moderado,Saludables,26.7,Hipertensión,Sí,Bajo
+18,Femenino,Activo,No Saludables,30.2,Normal,No,Alto
+23,Femenino,Activo,Saludables,26.1,Normal,Sí,Bajo
+25,Masculino,Activo,Saludables,30.4,Prehipertensión,Sí,Moderado
+28,Masculino,Sedentario,Saludables,33.4,Prehipertensión,Sí,Alto
+24,Masculino,Sedentario,Saludables,34.1,Hipertensión,Sí,Bajo
+21,Masculino,Activo,Saludables,30.2,Prehipertensión,No,Bajo
+18,Femenino,Moderado,No Saludables,34.6,Prehipertensión,No,Alto
+22,Masculino,Moderado,No Saludables,33.2,Hipertensión,No,Moderado
+25,Femenino,Activo,No Saludables,33.2,Normal,Sí,Moderado
+22,Masculino,Sedentario,No Saludables,18.7,Prehipertensión,No,Bajo
+19,Femenino,Moderado,No Saludables,25.6,Prehipertensión,Sí,Bajo
+20,Masculino,Sedentario,No Saludables,34.9,Normal,Sí,Moderado
+25,Masculino,Activo,Saludables,20.0,Hipertensión,No,Bajo
+27,Femenino,Moderado,Saludables,27.6,Hipertensión,Sí,Bajo
+21,Masculino,Activo,No Saludables,19.4,Normal,Sí,Moderado
+22,Masculino,Activo,No Saludables,22.7,Hipertensión,No,Moderado
+23,Masculino,Moderado,No Saludables,29.4,Prehipertensión,No,Moderado
+27,Masculino,Activo,Saludables,24.4,Normal,Sí,Moderado
+23,Masculino,Activo,Saludables,27.2,Normal,Sí,Moderado
+20,Femenino,Sedentario,No Saludables,32.0,Normal,Sí,Alto
+25,Femenino,Moderado,Saludables,24.0,Hipertensión,No,Moderado
+22,Femenino,Moderado,No Saludables,35.0,Prehipertensión,No,Alto
+19,Femenino,Activo,No Saludables,31.0,Hipertensión,No,Alto
+25,Masculino,Activo,No Saludables,27.7,Hipertensión,No,Bajo
+26,Femenino,Activo,Saludables,30.5,Hipertensión,Sí,Alto
+21,Femenino,Moderado,No Saludables,24.6,Normal,Sí,Bajo
+18,Masculino,Activo,No Saludables,31.3,Prehipertensión,No,Alto
+25,Femenino,Sedentario,Saludables,26.6,Normal,Sí,Alto
+19,Masculino,Moderado,No Saludables,18.6,Hipertensión,Sí,Bajo

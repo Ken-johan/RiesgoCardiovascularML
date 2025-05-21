@@ -1,71 +1,261 @@
+{% extends 'base.html' %}
+
+{% block title %}Resultado de la Predicción{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riesgo Cardiovascular</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Resultado - Riesgo Cardiovascular</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+    body {
+        background: linear-gradient(135deg, #f3f4f7, #e0e4ec);
+        color: #2d2d2d;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background 0.5s ease-in-out;
+    }
+
+    .navbar {
+        background: linear-gradient(to right, #667eea, #764ba2);
+        padding: 15px 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar-brand, .nav-link {
+        color: #ffffff !important;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #ffefc3 !important;
+        text-shadow: 0 0 10px rgba(255, 230, 150, 0.8);
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        padding: 50px;
+        margin: 20px auto;
+        max-width: 900px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        animation: fadeInUp 0.8s ease;
+        border: 1px solid rgba(200, 200, 200, 0.2);
+    }
+
+    .container:hover {
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: transparent;
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(170%);
+    }
+
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
         }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #093bdf;
-            padding: 14px 20px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            margin: 0 10px;
-        }
-        .navbar a:hover {
-            background-color: #093bdf;
-        }
-        .container {
-            margin-top: 20px;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .info-section {
-            margin-bottom: 40px;
-        }
-        .info-section h2 {
-            color: #093bdf;
-        }
+    }
+
+    a {
+        color: #5c4d8c;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #764ba2;
+    }
+
+    h1, h2, h3, h4 {
+        color: #333;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .resultado-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resultado-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 10px;
+        color: white;
+    }
+
+    .bg-success {
+        background: linear-gradient(to right, #28a745, #20c997);
+    }
+
+    .bg-warning {
+        background: linear-gradient(to right, #ffc107, #fd7e14);
+    }
+
+    .bg-danger {
+        background: linear-gradient(to right, #dc3545, #c71f37);
+    }
+
+    .alert {
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        border-left: 5px solid;
+    }
+
+    .alert-success {
+        background-color: rgba(40, 167, 69, 0.1);
+        border-left-color: #28a745;
+    }
+
+    .alert-warning {
+        background-color: rgba(255, 193, 7, 0.1);
+        border-left-color: #ffc107;
+    }
+
+    .alert-danger {
+        background-color: rgba(220, 53, 69, 0.1);
+        border-left-color: #dc3545;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        margin: 10px;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+        background: linear-gradient(to right, #667eea, #764ba2);
+    }
+
+    .btn-secondary {
+        background: linear-gradient(to right, #6c757d, #495057);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
     </style>
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <div class="navbar">
-        <a href="/">Inicio</a>
-        <a href="/informacion.html">Información del Proyecto</a>
-        <a href="/ingresar.html">Ingresar Datos</a>
-        <a href="/resultado.html">Ver Resultados</a>
-    </div>
-
-    <!-- Contenido Principal -->
     <div class="container">
         <h1>Resultado de la Predicción del Riesgo Cardiovascular</h1>
 
-        <div class="resultados">
-            <h2>Tu nivel de riesgo es: <strong>{{ nivel_riesgo }}</strong></h2>
+        <div class="resultado-card">
+            <h2>Tu nivel de riesgo es: 
+                <span class="badge {% if nivel_riesgo == 'Bajo' %}bg-success{% elif nivel_riesgo == 'Medio' %}bg-warning{% else %}bg-danger{% endif %}">
+                    {{ nivel_riesgo }}
+                </span>
+            </h2>
 
             <h3>Recomendaciones Personalizadas:</h3>
-            <ul>
-                <li><strong>Ejercicio:</strong> Aumentar el nivel de actividad física.</li>
-                <li><strong>Alimentación:</strong> Incorporar más frutas y reducir el consumo de fritos.</li>
-                <li><strong>Reducción de Estrés:</strong> Implementar técnicas de relajación o meditación.</li>
-                <li><strong>Consumo de Tabaco/Alcohol:</strong> Reducir el consumo de estas sustancias.</li>
-            </ul>
-
-            <p>Te recomendamos hacer un seguimiento regular con tu médico y mantener hábitos saludables para prevenir futuros problemas cardiovasculares.</p>
+            
+            {% if nivel_riesgo == 'Bajo' %}
+            <div class="alert alert-success">
+                <p><strong>¡Felicidades!</strong> Tu riesgo cardiovascular es bajo. Continúa con tus buenos hábitos.</p>
+                <ul>
+                    <li><strong>Ejercicio:</strong> Mantén tu nivel de actividad física actual o auméntalo gradualmente.</li>
+                    <li><strong>Alimentación:</strong> Sigue consumiendo alimentos saludables y evita el exceso de grasas saturadas.</li>
+                    <li><strong>Control médico:</strong> Realiza chequeos médicos anuales para mantener tu salud cardiovascular.</li>
+                </ul>
+            </div>
+            {% elif nivel_riesgo == 'Medio' %}
+            <div class="alert alert-warning">
+                <p><strong>Atención:</strong> Tu riesgo cardiovascular es moderado. Es importante que mejores algunos hábitos.</p>
+                <ul>
+                    <li><strong>Ejercicio:</strong> Incrementa tu actividad física a al menos 150 minutos semanales de ejercicio moderado.</li>
+                    <li><strong>Alimentación:</strong> Reduce el consumo de alimentos procesados, azúcares y grasas trans.</li>
+                    <li><strong>Estrés:</strong> Implementa técnicas de relajación como meditación o yoga.</li>
+                    <li><strong>Control médico:</strong> Visita a tu médico cada 6 meses para monitorear tu presión arterial y otros indicadores.</li>
+                </ul>
+            </div>
+            {% else %}
+            <div class="alert alert-danger">
+                <p><strong>¡Importante!</strong> Tu riesgo cardiovascular es alto. Necesitas tomar medidas inmediatas.</p>
+                <ul>
+                    <li><strong>Consulta médica:</strong> Programa una cita con un especialista lo antes posible.</li>
+                    <li><strong>Ejercicio:</strong> Comienza un programa de actividad física supervisado por un profesional.</li>
+                    <li><strong>Alimentación:</strong> Sigue una dieta estricta baja en sodio, grasas saturadas y azúcares.</li>
+                    <li><strong>Tabaco/Alcohol:</strong> Si consumes estas sustancias, es crucial que reduzcas o elimines su consumo.</li>
+                    <li><strong>Estrés:</strong> Busca ayuda profesional para manejar el estrés si es necesario.</li>
+                </ul>
+            </div>
+            {% endif %}
+            
+            <div class="mt-4">
+                <h4>Factores de riesgo a considerar:</h4>
+                <ul>
+                    <li>La presión arterial elevada aumenta significativamente el riesgo de enfermedades cardiovasculares.</li>
+                    <li>El sedentarismo es un factor de riesgo modificable importante.</li>
+                    <li>Una alimentación rica en frutas y verduras y baja en grasas saturadas protege tu corazón.</li>
+                    <li>El consumo de tabaco y alcohol incrementa el riesgo cardiovascular.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="/ingresar" class="btn btn-primary">Realizar otra predicción</a>
+            <a href="/" class="btn btn-secondary">Volver al inicio</a>
         </div>
     </div>
 </body>
 </html>
+{% endblock %}
