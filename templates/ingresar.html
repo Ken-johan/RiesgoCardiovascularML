@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresar Datos - Riesgo Cardiovascular</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
     body {
         background: linear-gradient(135deg, #f3f4f7, #e0e4ec);
@@ -105,62 +106,491 @@
     li {
         margin-bottom: 10px;
     }
-</style>
+
+    /* Estilos mejorados para el formulario */
+    .form-container {
+        background: linear-gradient(to right, #ffffff, #f8f9fa);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        margin-top: 30px;
+    }
+
+    .form-title {
+        color: #5c4d8c;
+        font-size: 24px;
+        margin-bottom: 25px;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .form-title:after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 3px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #444;
+        font-size: 15px;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        color: #333;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+        outline: none;
+    }
+
+    .form-group .icon {
+        position: absolute;
+        left: 15px;
+        top: 42px;
+        color: #667eea;
+    }
+
+    .form-group .icon-input {
+        padding-left: 40px;
+    }
+
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .form-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .form-col {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .range-container {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .range-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .range-value {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #667eea;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background: linear-gradient(to right, #ddd, #ddd);
+        outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #667eea;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #667eea;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="range"]:hover + .range-value {
+        opacity: 1;
+    }
+
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .submit-btn:active {
+        transform: translateY(1px);
+    }
+
+    .info-tooltip {
+        display: inline-block;
+        position: relative;
+        margin-left: 5px;
+        color: #667eea;
+        cursor: help;
+    }
+
+    .info-tooltip .tooltip-text {
+        visibility: hidden;
+        width: 200px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-tooltip .tooltip-text::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+    }
+
+    .info-tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Estilos para la tarjeta de resultado */
+    .resultado-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resultado-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 10px;
+        color: white;
+    }
+
+    .bg-success {
+        background: linear-gradient(to right, #28a745, #20c997);
+    }
+
+    .bg-warning {
+        background: linear-gradient(to right, #ffc107, #fd7e14);
+    }
+
+    .bg-danger {
+        background: linear-gradient(to right, #dc3545, #c71f37);
+    }
+
+    .alert {
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        border-left: 5px solid;
+    }
+
+    .alert-success {
+        background-color: rgba(40, 167, 69, 0.1);
+        border-left-color: #28a745;
+    }
+
+    .alert-warning {
+        background-color: rgba(255, 193, 7, 0.1);
+        border-left-color: #ffc107;
+    }
+
+    .alert-danger {
+        background-color: rgba(220, 53, 69, 0.1);
+        border-left-color: #dc3545;
+    }
+    </style>
     
 </head>
 <body>
-
-   
     <div class="container">
         <h1>Ingresar Datos para la Predicción del Riesgo Cardiovascular</h1>
 
-        <form action="/resultado" method="POST">
-            <div class="form-group">
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad" required>
-            </div>
+        {% if nivel_riesgo %}
+        <div class="resultado-card">
+            <h2>Tu nivel de riesgo es: 
+                <span class="badge {% if nivel_riesgo == 'Bajo' %}bg-success{% elif nivel_riesgo == 'Medio' %}bg-warning{% else %}bg-danger{% endif %}">
+                    {{ nivel_riesgo }}
+                </span>
+            </h2>
 
-            <div class="form-group">
-                <label for="genero">Género:</label>
-                <select id="genero" name="genero" required>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
-                </select>
+            <h3>Recomendaciones Personalizadas:</h3>
+            
+            {% if nivel_riesgo == 'Bajo' %}
+            <div class="alert alert-success">
+                <p><strong>¡Felicidades!</strong> Tu riesgo cardiovascular es bajo. Continúa con tus buenos hábitos.</p>
+                <ul>
+                    <li><strong>Ejercicio:</strong> Mantén tu nivel de actividad física actual o auméntalo gradualmente.</li>
+                    <li><strong>Alimentación:</strong> Sigue consumiendo alimentos saludables y evita el exceso de grasas saturadas.</li>
+                    <li><strong>Control médico:</strong> Realiza chequeos médicos anuales para mantener tu salud cardiovascular.</li>
+                </ul>
             </div>
-
-            <div class="form-group">
-                <label for="actividad">Nivel de actividad física (1-5):</label>
-                <input type="number" id="actividad" name="actividad" min="1" max="5" required>
+            {% elif nivel_riesgo == 'Medio' %}
+            <div class="alert alert-warning">
+                <p><strong>Atención:</strong> Tu riesgo cardiovascular es moderado. Es importante que mejores algunos hábitos.</p>
+                <ul>
+                    <li><strong>Ejercicio:</strong> Incrementa tu actividad física a al menos 150 minutos semanales de ejercicio moderado.</li>
+                    <li><strong>Alimentación:</strong> Reduce el consumo de alimentos procesados, azúcares y grasas trans.</li>
+                    <li><strong>Estrés:</strong> Implementa técnicas de relajación como meditación o yoga.</li>
+                    <li><strong>Control médico:</strong> Visita a tu médico cada 6 meses para monitorear tu presión arterial y otros indicadores.</li>
+                </ul>
             </div>
-
-            <div class="form-group">
-                <label for="imc">IMC (Índice de Masa Corporal):</label>
-                <input type="number" id="imc" name="imc" step="0.1" required>
+            {% else %}
+            <div class="alert alert-danger">
+                <p><strong>¡Importante!</strong> Tu riesgo cardiovascular es alto. Necesitas tomar medidas inmediatas.</p>
+                <ul>
+                    <li><strong>Consulta médica:</strong> Programa una cita con un especialista lo antes posible.</li>
+                    <li><strong>Ejercicio:</strong> Comienza un programa de actividad física supervisado por un profesional.</li>
+                    <li><strong>Alimentación:</strong> Sigue una dieta estricta baja en sodio, grasas saturadas y azúcares.</li>
+                    <li><strong>Tabaco/Alcohol:</strong> Si consumes estas sustancias, es crucial que reduzcas o elimines su consumo.</li>
+                    <li><strong>Estrés:</strong> Busca ayuda profesional para manejar el estrés si es necesario.</li>
+                </ul>
             </div>
-
-            <div class="form-group">
-                <label for="presion">Presión arterial (mmHg):</label>
-                <input type="number" id="presion" name="presion" required>
+            {% endif %}
+            
+            <div class="mt-4">
+                <h4>Factores de riesgo a considerar:</h4>
+                <ul>
+                    <li>La presión arterial elevada aumenta significativamente el riesgo de enfermedades cardiovasculares.</li>
+                    <li>El sedentarismo es un factor de riesgo modificable importante.</li>
+                    <li>Una alimentación rica en frutas y verduras y baja en grasas saturadas protege tu corazón.</li>
+                    <li>El consumo de tabaco y alcohol incrementa el riesgo cardiovascular.</li>
+                </ul>
             </div>
+        </div>
+        {% endif %}
 
-            <div class="form-group">
-                <label for="consumo">Consumo de tabaco/alcohol (0: Ninguno, 1: Bajo, 2: Moderado, 3: Alto):</label>
-                <input type="number" id="consumo" name="consumo" min="0" max="3" required>
-            </div>
+        <div class="form-container">
+            <h2 class="form-title">Completa tus datos personales</h2>
+            <form action="/ingresar" method="POST">
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="edad">Edad <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                                <span class="tooltip-text">Ingresa tu edad en años cumplidos.</span>
+                            </span></label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user icon"></i>
+                                <input type="number" id="edad" name="edad" class="icon-input" required min="18" max="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="genero">Género <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                                <span class="tooltip-text">Selecciona tu género biológico.</span>
+                            </span></label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-venus-mars icon"></i>
+                                <select id="genero" name="genero" class="icon-input" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label for="alimentacion">Alimentación (Frecuencia de frutas, fritos, bebidas azucaradas):</label>
-                <input type="text" id="alimentacion" name="alimentacion" required>
-            </div>
+                <div class="form-group">
+                    <label for="actividad">Nivel de actividad física <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                        <span class="tooltip-text">1: Muy sedentario, 2: Sedentario, 3: Moderado, 4: Activo, 5: Muy activo</span>
+                    </span></label>
+                    <div class="range-container">
+                        <input type="range" id="actividad" name="actividad" min="1" max="5" value="3" required>
+                        <span class="range-value" id="actividad-value">3</span>
+                        <div class="range-labels">
+                            <span>Sedentario</span>
+                            <span>Moderado</span>
+                            <span>Activo</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="form-group">
-                <label for="estres">Nivel de estrés (1-5):</label>
-                <input type="number" id="estres" name="estres" min="1" max="5" required>
-            </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="imc">IMC (Índice de Masa Corporal) <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                                <span class="tooltip-text">Peso (kg) / Altura² (m). Normal: 18.5-24.9, Sobrepeso: 25-29.9, Obesidad: >30</span>
+                            </span></label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-weight icon"></i>
+                                <input type="number" id="imc" name="imc" step="0.1" min="15" max="50" class="icon-input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="presion">Presión arterial (mmHg) <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                                <span class="tooltip-text">Valor sistólico. Normal: <120, Prehipertensión: 120-139, Hipertensión: >140</span>
+                            </span></label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-heartbeat icon"></i>
+                                <input type="number" id="presion" name="presion" min="80" max="200" class="icon-input" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <button type="submit">Predecir Riesgo</button>
-        </form>
+                <div class="form-group">
+                    <label for="consumo">Consumo de tabaco/alcohol <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                        <span class="tooltip-text">0: Ninguno, 1: Bajo, 2: Moderado, 3: Alto</span>
+                    </span></label>
+                    <div class="range-container">
+                        <input type="range" id="consumo" name="consumo" min="0" max="3" value="0" required>
+                        <span class="range-value" id="consumo-value">0</span>
+                        <div class="range-labels">
+                            <span>Ninguno</span>
+                            <span>Bajo</span>
+                            <span>Moderado</span>
+                            <span>Alto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="alimentacion">Alimentación <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                        <span class="tooltip-text">Describe tu alimentación habitual (frutas, verduras, fritos, bebidas azucaradas, etc.)</span>
+                    </span></label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-apple-alt icon"></i>
+                        <textarea id="alimentacion" name="alimentacion" class="icon-input" rows="3" required placeholder="Ejemplo: Consumo frutas y verduras diariamente, fritos 2 veces por semana..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="estres">Nivel de estrés <span class="info-tooltip"><i class="fas fa-info-circle"></i>
+                        <span class="tooltip-text">1: Muy bajo, 2: Bajo, 3: Moderado, 4: Alto, 5: Muy alto</span>
+                    </span></label>
+                    <div class="range-container">
+                        <input type="range" id="estres" name="estres" min="1" max="5" value="3" required>
+                        <span class="range-value" id="estres-value">3</span>
+                        <div class="range-labels">
+                            <span>Bajo</span>
+                            <span>Moderado</span>
+                            <span>Alto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn"><i class="fas fa-heartbeat"></i> Predecir mi Riesgo Cardiovascular</button>
+            </form>
+        </div>
     </div>
+
+    <script>
+        // Script para mostrar el valor de los sliders
+        const actividadSlider = document.getElementById('actividad');
+        const actividadValue = document.getElementById('actividad-value');
+        const consumoSlider = document.getElementById('consumo');
+        const consumoValue = document.getElementById('consumo-value');
+        const estresSlider = document.getElementById('estres');
+        const estresValue = document.getElementById('estres-value');
+
+        function updateSliderValue(slider, valueElement) {
+            valueElement.textContent = slider.value;
+            const percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+            valueElement.style.left = `calc(${percent}% + (${8 - percent * 0.15}px))`;
+            valueElement.style.opacity = 1;
+        }
+
+        actividadSlider.addEventListener('input', () => updateSliderValue(actividadSlider, actividadValue));
+        consumoSlider.addEventListener('input', () => updateSliderValue(consumoSlider, consumoValue));
+        estresSlider.addEventListener('input', () => updateSliderValue(estresSlider, estresValue));
+
+        // Inicializar los valores
+        updateSliderValue(actividadSlider, actividadValue);
+        updateSliderValue(consumoSlider, consumoValue);
+        updateSliderValue(estresSlider, estresValue);
+    </script>
 </body>
 </html>
 {% endblock %}
